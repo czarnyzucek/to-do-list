@@ -1,0 +1,35 @@
+.taskList {
+    padding: 20px;
+    margin: 0;
+    list-style-type: none;
+}
+
+.taskList__item {
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+    align-items: center;
+    grid-gap: 15px;
+    
+    padding: 10px;
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+}
+
+.taskList__button {
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.taskList__button--done {
+    background-color: green;
+    color: white;
+}
+
+.taskList__button--remove {
+    background-color: red;
+    color: white;
+}
+
+.tasksList__spanTask--done {
+    text-decoration: line-through;
+}
