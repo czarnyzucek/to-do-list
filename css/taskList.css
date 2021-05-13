@@ -9,7 +9,6 @@
     grid-template-columns: 30px 1fr 30px;
     align-items: center;
     grid-gap: 15px;
-    
     padding: 10px;
     border-bottom: 1px solid hsl(0, 0%, 80%);
 }
@@ -30,6 +29,10 @@
     color: white;
 }
 
+.tasksList__spanTask {
+    word-break: break-word;
+}
+
 .tasksList__spanTask--done {
     text-decoration: line-through;
-}
+} 
