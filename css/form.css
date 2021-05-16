@@ -28,8 +28,10 @@
         flex-direction: column;
         grid-gap: 7px;
     }
+}
 
 @media (max-width: 767px) {
     .form__button {
         padding: 8px;
     }
+}
