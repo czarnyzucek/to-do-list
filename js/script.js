@@ -18,6 +18,11 @@
         render();
     }
 
+    const clearNewTaskInput = (newTaskInput) => {
+        newTaskInput.focus();
+        newTaskInput.value = "";
+    };
+
     const removeTask = (taskIndex) => {
         tasks.splice(taskIndex, 1);
         render();
@@ -73,13 +78,16 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
+        const newTaskInput = document.querySelector(".js-newTask");
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
         if (newTaskContent === "") {
+            newTaskInput.focus();
             return;
         }
 
         addNewTask(newTaskContent)
+        clearNewTaskInput(newTaskInput);
     };
 
     const init = () => {
