@@ -1,14 +1,5 @@
 {
-    const tasks = [
-        {
-            content: "odrobić lekcje",
-            done: false,
-        },
-        {
-            content: "zjeść kolację",
-            done: true,
-        },
-    ];
+    const tasks = [];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -49,7 +40,7 @@
             toggleTaskDone(index);
         });
     });
-
+    
     }
 
     const render = () => {
@@ -73,7 +64,6 @@
 
        bindEvents();
     };
-
 
     const onFormSubmit = (event) => {
         event.preventDefault();
