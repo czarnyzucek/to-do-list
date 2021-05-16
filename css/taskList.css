@@ -24,9 +24,17 @@
     color: white;
 }
 
+.taskList__button--done:active {
+    outline: 1px solid black;
+}
+
 .taskList__button--remove {
     background-color: red;
     color: white;
+}
+
+.taskList__button--remove:active {
+    outline: 1px solid black;
 }
 
 .tasksList__spanTask {

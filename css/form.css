@@ -18,6 +18,12 @@
     border: none;
 }
 
+
+
+.form__button:active {
+    outline: 1px solid black;
+}
+
 @media (max-width: 767px) {
     .form {
         display: flex;
