@@ -1,10 +1,11 @@
 {
-    const tasks = [];
+    let tasks = [];
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            { content: newTaskContent }
+        ];
 
         render();
     }
@@ -14,13 +15,22 @@
         newTaskInput.value = "";
     };
 
-    const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+    const removeTask = (index) => {
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1),
+        ]
+
         render();
     }
 
-    const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+    const toggleTaskDone = (index) => {
+        tasks = [
+            ...tasks.slice(0, index),
+            { ...tasks[index], done: !tasks[index].done },
+            ...tasks.slice(index + 1),
+        ]
+
         render();
     }
 
@@ -89,5 +99,6 @@
 
         form.addEventListener("submit", onFormSubmit);
     };
+
     init();
 }
