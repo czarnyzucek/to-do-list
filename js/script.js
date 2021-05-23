@@ -1,6 +1,11 @@
 {
     let tasks = [];
 
+    const clearNewTaskInput = (newTaskInput) => {
+        newTaskInput.focus();
+        newTaskInput.value = "";
+    };
+
     const addNewTask = (newTaskContent) => {
         tasks = [
             ...tasks,
@@ -10,26 +15,26 @@
         render();
     }
 
-    const clearNewTaskInput = (newTaskInput) => {
-        newTaskInput.focus();
-        newTaskInput.value = "";
-    };
-
     const removeTask = (index) => {
         tasks = [
             ...tasks.slice(0, index),
             ...tasks.slice(index + 1),
-        ]
+        ];
 
         render();
     }
 
     const toggleTaskDone = (index) => {
+        const tasks = tasks[index];
+
         tasks = [
             ...tasks.slice(0, index),
-            { ...tasks[index], done: !tasks[index].done },
+            { 
+                ...tasks, 
+                done: !tasks.done,
+            },
             ...tasks.slice(index + 1),
-        ]
+        ];
 
         render();
     }
