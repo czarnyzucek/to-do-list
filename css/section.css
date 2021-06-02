@@ -30,3 +30,7 @@
     border: none;
     margin-right: 10px;
 }
+
+.section__button:disabled {
+    color: hsla(0, 0%, 50%, 0.575);
+}

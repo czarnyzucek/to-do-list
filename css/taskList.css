@@ -13,6 +13,10 @@
     border-bottom: 1px solid hsl(0, 0%, 80%);
 }
 
+.taskList__item--hidden {
+    display: none;
+}
+
 .taskList__button {
     width: 30px;
     height: 30px;
