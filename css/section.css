@@ -4,7 +4,7 @@
 }
 
 .section__header {
-    border-bottom: 2px solid #dadada;
+    border-bottom: 1px solid #dadada;
     padding: 15px;
     margin: 0;
     font-size: 16px;
@@ -12,9 +12,17 @@
 
 .section__headerWrapper {
     display: flex;
+    border-bottom: 1px solid #dadada;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #dadada;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+    .section__headerWrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
 .section__buttonHeader {
@@ -25,12 +33,25 @@
 
 .section__button {
     font-family: Montserrat, sans-serif;
-    color: teal;
-    background-color: transparent;
     border: none;
-    margin-right: 10px;
+    margin: 0 10px;
+    color: hsl(180, 100%, 25%);
+    background-color: transparent;
+    font-size: 14px;
+    transition: color 0.5s;
+}
+
+@media (max-width: 767px) {
+    .section__button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.section__button:hover {
+    color: hsl(180, 100%, 35%);
 }
 
 .section__button:disabled {
-    color: hsla(0, 0%, 50%, 0.575);
+    color: #ccc;
 }
