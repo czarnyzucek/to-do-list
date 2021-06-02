@@ -27,8 +27,9 @@
     const toggleTaskDone = (index) => {
         tasks = [
             ...tasks.slice(0, index),
-            { ...tasks[index], 
-                done: !tasks[index].done 
+            {
+                ...tasks[index],
+                done: !tasks[index].done
             },
             ...tasks.slice(index + 1),
         ];
@@ -52,10 +53,9 @@
                 toggleTaskDone(index);
             });
         });
+    };
 
-    }
-
-    const render = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -75,6 +75,13 @@
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+    };
+
+    const renderButtons = () => { };
+
+    const render = () => {
+        renderTasks();
+        renderButtons();
 
         bindEvents();
     };
