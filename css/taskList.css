@@ -21,7 +21,7 @@
     width: 30px;
     height: 30px;
     border: none;
-    transition: background 0.3s;
+    transition: backgroung 0.5s;
 }
 
 .taskList__button--done {
