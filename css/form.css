@@ -17,6 +17,7 @@
     background-color: teal;
     border: none;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .form__button:hover {

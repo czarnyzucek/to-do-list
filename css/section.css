@@ -39,6 +39,7 @@
     background-color: transparent;
     font-size: 14px;
     transition: color 0.5s;
+    cursor: pointer;
 }
 
 @media (max-width: 767px) {
