@@ -119,7 +119,6 @@
 
         if (markAllDoneButton) {
             markAllDoneButton.addEventListener("click", markAllTasksDone);
-
         }
 
         const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneTasks");
