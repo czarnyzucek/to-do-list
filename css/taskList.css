@@ -21,7 +21,7 @@
     width: 30px;
     height: 30px;
     border: none;
-    transition: background 0.5s;
+    transition: background 0.3s;
     cursor: pointer;
 }
 
@@ -59,4 +59,4 @@
 
 .tasksList__spanTask--done {
     text-decoration: line-through;
-} 
+}

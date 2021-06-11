@@ -38,7 +38,7 @@
     color: hsl(180, 100%, 25%);
     background-color: transparent;
     font-size: 14px;
-    transition: color 0.5s;
+    transition: color 0.3s;
     cursor: pointer;
 }
 
