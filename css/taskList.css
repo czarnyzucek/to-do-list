@@ -9,7 +9,7 @@
     grid-template-columns: auto 1fr auto;
     align-items: center;
     grid-gap: 15px;
-    padding: 8px;
+    padding: 10px;
     border-bottom: 1px solid hsl(0, 0%, 80%);
 }
 
